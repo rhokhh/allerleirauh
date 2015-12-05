@@ -1,0 +1,12 @@
+<table>
+<?php foreach ($this->books as $book): ?>
+  <tr>
+    <td>
+		<strong><?php echo $book['title']; ?></strong>
+    </td>
+    <td>
+      <?php echo $cd['author']; ?>
+    </td>
+  </tr>
+<?php endforeach; ?>
+</table>
