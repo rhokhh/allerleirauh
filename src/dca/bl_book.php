@@ -38,13 +38,14 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'sorting' => array
 		(
 			'mode'                    => 1,
-			'fields'                  => array(''),
-			'flag'                    => 1
+			'fields'                  => array('title','author'),
+			'flag'                    => 1,
+			'panelLayout'             => 'search,limit'
 		),
 		'label' => array
 		(
-			'fields'                  => array(''),
-			'format'                  => '%s'
+			'fields'                  => array('title', 'author'),
+			'format'                  => '%s (%s)'
 		),
 		'global_operations' => array
 		(
@@ -125,10 +126,60 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'title' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['title'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>1024),
+			'sql'                     => "varchar(1024) NOT NULL default ''"
+		),
+		'author' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['author'],
+			'search'                  => true,
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>true, 'maxlength'=>1024),
+			'sql'                     => "varchar(1024) NOT NULL default ''"
+		),
+		'year' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['year'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
+			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'category' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['category'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
+			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'tag' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['tag'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
+			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'no' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['no'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
+			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'isbn' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['isbn'],
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
+			'sql'                     => "varchar(64) NOT NULL default ''"
 		)
 	)
 );

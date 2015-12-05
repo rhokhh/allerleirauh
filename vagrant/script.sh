@@ -29,7 +29,7 @@ curl -L http://download.contao.org | tar -xzp
 
 export DIR=/var/www/html/contao
 
-sudo mv contao-3.5.6 $DIR
+sudo cp -r -a contao-3.5.6/. $DIR/
 
 sudo chown -R  www-data:www-data $DIR/
 sudo chmod -R 755 $DIR/

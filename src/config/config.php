@@ -18,16 +18,14 @@
  * Back end modules are stored in a global array called "BE_MOD". You can add
  * your own modules by adding them to the array.
  */
-  $GLOBALS['BE_MOD'] = array
-  (
-     'content' => array
-     (
-        'book_library' => array
+ array_insert($GLOBALS['BE_MOD']['content'], 4, array
+ (
+	'book_library' => array
         (
            'tables'       => array('bl_book')
         )
      )
-  );
+ );
  /*
  * Not all of the keys mentioned above (like "tables", "key", "callback" etc.)
  * have to be set. Take a look at the system/modules/core/config/config.php
