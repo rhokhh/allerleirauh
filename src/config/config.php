@@ -42,9 +42,9 @@
  */
  
  // Front end module
-array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, array
+array_insert($GLOBALS['TL_CTE']['book_library'], 0, array
 (
- 'book' => 'BookLibrary\book'
+ 'book_gallery' => 'BookLibrary\book'
 ));
  
  /*

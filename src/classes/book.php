@@ -42,7 +42,15 @@ class book extends \Module
 	 */
 	public function generate()
 	{
-	
+		if (TL_MODE == 'BE')
+		{
+			$objTemplate = new \BackendTemplate('be_wildcard');
+
+			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['book_gallery'][1]) . ' ###';
+			
+			return $objTemplate->parse();
+		}
+		
 		return parent::generate();
 	}
 

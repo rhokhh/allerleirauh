@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'sorting' => array
 		(
 			'mode'                    => 1,
-			'fields'                  => array('title'),
+			'fields'                  => array('title','year'),
 			'flag'                    => 1,
 			'panelLayout'             => 'search,limit'
 		),
@@ -144,6 +144,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'year' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['year'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
@@ -152,6 +153,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'category' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['category'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
@@ -160,6 +162,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'tag' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['tag'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
@@ -168,6 +171,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'no' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['no'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
@@ -176,6 +180,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'isbn' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['isbn'],
+			'search'                  => true,
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
