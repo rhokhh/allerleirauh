@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'sorting' => array
 		(
 			'mode'                    => 1,
-			'fields'                  => array('title','author'),
+			'fields'                  => array('title'),
 			'flag'                    => 1,
 			'panelLayout'             => 'search,limit'
 		),
@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array(''),
-		'default'                     => '{title_legend},title;'
+		'default'                     => '{title_legend},title,author,year,category,tag,no,isbn;'
 	),
 
 	// Subpalettes

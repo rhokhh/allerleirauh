@@ -16,3 +16,6 @@
  * Miscellaneous
  */
 $GLOBALS['TL_LANG']['MSC'][''] = '';
+
+
+$GLOBALS['TL_LANG']['bl_book']['author'] = "Author";
