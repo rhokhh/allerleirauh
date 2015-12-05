@@ -17,6 +17,14 @@
  */
 $GLOBALS['TL_LANG']['MOD']['book_library'] = array('Bibliothek','Verwalten von Büchern');
 
+$GLOBALS['TL_LANG']['MSC']['author'] = "Autor";
+$GLOBALS['TL_LANG']['MSC']['year'] = "Jahr";
+$GLOBALS['TL_LANG']['MSC']['isbn'] = "ISBN";
+$GLOBALS['TL_LANG']['MSC']['no'] = "Nummer";
+$GLOBALS['TL_LANG']['MSC']['title'] = "Titel";
+$GLOBALS['TL_LANG']['MSC']['category'] = "Kategorie";
+$GLOBALS['TL_LANG']['MSC']['tag'] = "Schlagwort";
+
 
 $GLOBALS['TL_LANG']['bl_book']['title_legend'] = "Titeldaten";
 $GLOBALS['TL_LANG']['bl_book']['author'] = array("Autor","Autor/-in oder Autor/-innen");
@@ -26,6 +34,7 @@ $GLOBALS['TL_LANG']['bl_book']['no'] = array("Nummer","");
 $GLOBALS['TL_LANG']['bl_book']['title'] = array("Titel","Titel des Buches");
 $GLOBALS['TL_LANG']['bl_book']['category'] = array("Kategorie","");
 $GLOBALS['TL_LANG']['bl_book']['tag'] = array("Schlagwort","");
+
 
 $GLOBALS['TL_LANG']['CTE']['book_library'] = array("Bibliothek", "Bibliothek");
 $GLOBALS['TL_LANG']['CTE']['book_gallery'] = array("Buchliste","Liste von Büchern");

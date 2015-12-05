@@ -60,22 +60,48 @@ class book extends \ContentElement
 	protected function compile()
 	{
 		$arrBooks = array();
-
-		$objBooks = $this->Database->execute("SELECT * FROM bl_book ORDER BY title");
-		  while ($objBooks->next())
-		  {
-			$arrBooks[] = array
-			(
-			  'id' => $objBooks->id,
-			  'title' => $objBooks->title,
-			  'author' => $objBooks->author,
-			  'year' => $objBooks->year,
-			  'no' => $objBooks->no,
-			  'category' => $objBooks->category,
-			  'tag' => $objBooks->tag
+		
+		$selectedTag = $_GET['tag'];
+		
+		if(empty($selectedTag)) {
+			$objBooks = $this->Database->execute("SELECT * FROM bl_book ORDER BY title");
+		} else {
+			$objBooks = $this->Database->prepare("SELECT * FROM bl_book WHERE tag=? ORDER BY title")->execute($selectedTag);
+		}
+		while ($objBooks->next()) {
+			$arrBooks[] = array(
+				'id' => $objBooks->id,
+				'title' => $objBooks->title,
+				'author' => $objBooks->author,
+				'year' => $objBooks->year,
+				'no' => $objBooks->no,
+				'category' => $objBooks->category,
+				'tag' => $objBooks->tag
 			);
-		  }
-
-		  $this->Template->books = $arrBooks;
+		}
+		
+		$tags = array();
+		
+		foreach(array("sMI", "b") as $tag) {
+			$tagObj = array(
+				'label' => $tag,
+				'tag' => $tag,
+				'selected' => ($selectedTag == $tag)
+			);
+			
+			$tags []= $tagObj;
+		}
+		$this->Template->tags = $tags;
+		$this->Template->books = $arrBooks;
+		
+		$this->Template->titleLabel = $GLOBALS['TL_LANG']['MSC']['title'];
+		$this->Template->authorLabel = $GLOBALS['TL_LANG']['MSC']['author'];
+		$this->Template->yearLabel = $GLOBALS['TL_LANG']['MSC']['year'];
+		$this->Template->categoryLabel = $GLOBALS['TL_LANG']['MSC']['category'];
+		$this->Template->tagLabel = $GLOBALS['TL_LANG']['MSC']['tag'];
+		$this->Template->noLabel = $GLOBALS['TL_LANG']['MSC']['no'];
+		$this->Template->isbnLabel = $GLOBALS['TL_LANG']['MSC']['isbn'];
+		$this->Template->lentLabel = $GLOBALS['TL_LANG']['MSC']['lent'];
+		
 	}
 }

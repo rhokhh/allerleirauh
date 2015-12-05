@@ -1,12 +1,35 @@
+<form action="" method="GET">
+<select name="tag">
+print_r($this->tags);
+  <?php foreach($this->tags as $tag): ?>
+    <option value="<?php echo $tag['tag']; ?>"<?php if ($tag['selected']): ?> selected="selected"<?php endif; ?>><?php echo $tag['label']; ?></option>
+  <?php endforeach; ?>
+</select>
+<input type="submit" value="OK" />
+</form>
+
+
 <table>
+	<tr>
+		<th><?= $this->titleLabel ?></th>
+		<th><?= $this->authorLabel ?></th>
+		<th><?= $this->yearLabel ?></th>
+		<th><?= $this->categoryLabel ?></th>
+		<th><?= $this->tagLabel ?></th>
+		<th><?= $this->noLabel ?></th>
+		<th><?= $this->isbnLabel ?></th>
+		<th><?= $this->lentLabel ?></th>
+	</tr>
 <?php foreach ($this->books as $book): ?>
   <tr>
-    <td>
-		<?php echo $book['title']; ?>
-    </td>
-    <td>
-      <?php echo $book['author']; ?>
-    </td>
+    <td><?php echo $book['title']; ?></td>
+    <td><?php echo $book['author']; ?></td>
+    <td><?php echo $book['year']; ?></td>
+    <td><?php echo $book['category']; ?></td>
+    <td><?php echo $book['tag']; ?></td>
+    <td><?php echo $book['no']; ?></td>
+    <td><?php echo $book['isbn']; ?></td>
+    <td><?php echo $book['lent']; ?></td>
   </tr>
 <?php endforeach; ?>
 </table>
