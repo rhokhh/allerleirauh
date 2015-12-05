@@ -2,10 +2,10 @@
 <?php foreach ($this->books as $book): ?>
   <tr>
     <td>
-		<strong><?php echo $book['title']; ?></strong>
+		<?php echo $book['title']; ?>
     </td>
     <td>
-      <?php echo $cd['author']; ?>
+      <?php echo $book['author']; ?>
     </td>
   </tr>
 <?php endforeach; ?>

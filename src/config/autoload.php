@@ -33,5 +33,5 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'book' => 'system/modules/book_library/templates/book',
+	'book_library' => 'system/modules/book_library/templates',
 ));

@@ -25,14 +25,14 @@ namespace BookLibrary;
  * @author     RHOK
  * @package    Devtools
  */
-class book extends \Module
+class book extends \ContentElement
 {
 
 	/**
 	 * Template
 	 * @var string
 	 */
-	protected $strTemplate = 'book';
+	protected $strTemplate = 'book_library';
 
 
 	/**
@@ -61,8 +61,7 @@ class book extends \Module
 	{
 		$arrBooks = array();
 
-		$objBooks = $this->Database->prepare("SELECT * FROM bl_book ORDER BY title")->execute();
-
+		$objBooks = $this->Database->execute("SELECT * FROM bl_book ORDER BY title");
 		  while ($objBooks->next())
 		  {
 			$arrBooks[] = array
