@@ -39,16 +39,15 @@
  *
  * Front end modules are stored in a global array called "FE_MOD". You can add
  * your own modules by adding them to the array.
- *
- * $GLOBALS['FE_MOD'] = array
- * (
- *    'group_1' => array
- *    (
- *       'module_1' => 'ModuleClass1',
- *       'module_2' => 'ModuleClass2'
- *    )
- * );
- *
+ */
+ 
+ // Front end module
+array_insert($GLOBALS['TL_CTE']['miscellaneous'], 0, array
+(
+ 'book' => 'BookLibrary\book'
+));
+ 
+ /*
  * The keys (like "module_1") are the module names, which are e.g. stored in the
  * database and used to find the corresponding translations. The values (like
  * "ModuleClass1") are the names of the classes, which will be loaded when the
