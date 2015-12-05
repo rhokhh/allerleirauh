@@ -1,6 +1,11 @@
+
 <form action="" method="GET">
+<h3>
+	<?= $this->tagLabel ?>
+</h3>
+
 <select name="tag">
-print_r($this->tags);
+	<option value="">-</option>
   <?php foreach($this->tags as $tag): ?>
     <option value="<?php echo $tag['tag']; ?>"<?php if ($tag['selected']): ?> selected="selected"<?php endif; ?>><?php echo $tag['label']; ?></option>
   <?php endforeach; ?>
@@ -9,6 +14,9 @@ print_r($this->tags);
 </form>
 
 
+<h3>
+	<?= $this->resultsLabel ?>
+</h3>
 <table>
 	<tr>
 		<th><?= $this->titleLabel ?></th>

@@ -82,9 +82,11 @@ class book extends \ContentElement
 		
 		$tags = array();
 		
-		foreach(array("sMI", "b") as $tag) {
+		$tagTemplates = $GLOBALS['TL_LANG']['MSC']['tags'];
+		
+		foreach($tagTemplates as $tag) {
 			$tagObj = array(
-				'label' => $tag,
+				'label' => $GLOBALS['TL_LANG']['MSC']['tagLabels'][$tag] ?: $tag,
 				'tag' => $tag,
 				'selected' => ($selectedTag == $tag)
 			);
@@ -94,6 +96,7 @@ class book extends \ContentElement
 		$this->Template->tags = $tags;
 		$this->Template->books = $arrBooks;
 		
+		$this->Template->resultsLabel = $GLOBALS['TL_LANG']['MSC']['results'];
 		$this->Template->titleLabel = $GLOBALS['TL_LANG']['MSC']['title'];
 		$this->Template->authorLabel = $GLOBALS['TL_LANG']['MSC']['author'];
 		$this->Template->yearLabel = $GLOBALS['TL_LANG']['MSC']['year'];
