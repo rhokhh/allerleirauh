@@ -1,20 +1,5 @@
 <?php
 
-/**
- * Contao Open Source CMS
- *
- * Copyright (c) 2005-2015 Leo Feyer
- *
- * @package   BookLibrary
- * @author    RHOK
- * @license   Apache2.0
- * @copyright RHOK
- */
-
-
-/**
- * Table bl_book
- */
 $GLOBALS['TL_DCA']['bl_book'] = array
 (
 
@@ -103,7 +88,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array(''),
-		'default'                     => '{title_legend},title,author,year,category,tag,no,isbn;'
+		'default'                     => '{title_legend},title,author,year,category,tag,no,isbn,lent;'
 	),
 
 	// Subpalettes
@@ -185,6 +170,14 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>false, 'maxlength'=>64),
 			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'lent' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['lent'],
+			'exclude'                 => true,
+			'inputType'               => 'checkbox',
+			'eval'                    => array('mandatory'=>true),
+			'sql'                     => "char(1) NOT NULL default ''"
 		)
 	)
 );
