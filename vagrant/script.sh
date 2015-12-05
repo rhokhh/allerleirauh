@@ -38,6 +38,3 @@ sudo chmod -R 775 $DIR/system/logs/
 sudo chmod -R 775 $DIR/system/tmp
 sudo mv $DIR/.htaccess.default $DIR/.htaccess
 
-
-sudo ln -s /vagrant_data/ /var/www/html/contao/system/modules/book_library
-
