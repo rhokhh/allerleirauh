@@ -18,7 +18,4 @@
 $GLOBALS['TL_LANG']['MOD'][''] = array('', '');
 
 
-/**
- * Front end modules
- */
-$GLOBALS['TL_LANG']['FMD'][''] = array('', '');
+$GLOBALS['TL_LANG']['bl_book']['author'] = array("Author","");
