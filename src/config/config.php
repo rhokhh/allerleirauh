@@ -22,7 +22,8 @@
  (
 	'book_library' => array
         (
-           'tables'       => array('bl_book')
+           'tables'       => array('bl_book'),
+           'icon'         => 'system/modules/book_library/assets/img/book.png'
         )
      )
  );
