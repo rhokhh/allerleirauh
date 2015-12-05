@@ -38,3 +38,6 @@ sudo chmod -R 775 $DIR/system/logs/
 sudo chmod -R 775 $DIR/system/tmp
 sudo mv $DIR/.htaccess.default $DIR/.htaccess
 
+sudo sed -i -e "s/^upload_max_filesize\s*=\s*2M/upload_max_filesize = 16G/" /etc/php5/apache2/php.ini
+
+sudo service apache2 reload
