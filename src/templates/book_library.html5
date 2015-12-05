@@ -37,7 +37,7 @@
     <td><?php echo $book['tag']; ?></td>
     <td><?php echo $book['no']; ?></td>
     <td><?php echo $book['isbn']; ?></td>
-    <td><?php echo $book['lent']; ?></td>
+    <td><?php echo $book['lent'] ? 'x' : '-'; ?></td>
   </tr>
 <?php endforeach; ?>
 </table>

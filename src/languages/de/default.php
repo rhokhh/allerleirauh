@@ -74,6 +74,7 @@ $GLOBALS['TL_LANG']['MSC']['no'] = "Nummer";
 $GLOBALS['TL_LANG']['MSC']['title'] = "Titel";
 $GLOBALS['TL_LANG']['MSC']['category'] = "Kategorie";
 $GLOBALS['TL_LANG']['MSC']['tag'] = "Schlagwort";
+$GLOBALS['TL_LANG']['MSC']['lent'] = "Ausgeliehen";
 
 
 $GLOBALS['TL_LANG']['bl_book']['title_legend'] = "Titeldaten";

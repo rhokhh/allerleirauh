@@ -76,7 +76,8 @@ class book extends \ContentElement
 				'year' => $objBooks->year,
 				'no' => $objBooks->no,
 				'category' => $objBooks->category,
-				'tag' => $objBooks->tag
+				'tag' => $objBooks->tag,
+				'lent' => $objBooks->lent
 			);
 		}
 		

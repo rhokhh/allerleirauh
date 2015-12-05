@@ -74,6 +74,7 @@ $GLOBALS['TL_LANG']['MSC']['no'] = "Number";
 $GLOBALS['TL_LANG']['MSC']['title'] = "Title";
 $GLOBALS['TL_LANG']['MSC']['category'] = "Category";
 $GLOBALS['TL_LANG']['MSC']['tag'] = "Keyword";
+$GLOBALS['TL_LANG']['MSC']['lent'] = "Borrowed";
 
 
 $GLOBALS['TL_LANG']['bl_book']['title_legend'] = "Meta data";

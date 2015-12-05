@@ -23,14 +23,14 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 		'sorting' => array
 		(
 			'mode'                    => 1,
-			'fields'                  => array('title','year'),
+			'fields'                  => array('title'),
 			'flag'                    => 1,
 			'panelLayout'             => 'search,limit'
 		),
 		'label' => array
 		(
-			'fields'                  => array('title', 'author'),
-			'format'                  => '%s (%s)'
+			'fields'                  => array('title', 'author', 'year'),
+			'format'                  => '%s [%s; %s] '
 		),
 		'global_operations' => array
 		(
@@ -178,7 +178,7 @@ $GLOBALS['TL_DCA']['bl_book'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['bl_book']['lent'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
-			'eval'                    => array('mandatory'=>true),
+			'eval'                    => array('mandatory'=>false),
 			'sql'                     => "char(1) NOT NULL default ''"
 		)
 	)
